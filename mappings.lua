@@ -14,7 +14,13 @@ M.dap = {
         sidebar.open();
       end,
       "Open debugging sidebar"
-    },
+    }
+  }
+}
+
+M.dap_go = {
+  plugin = true,
+  n = {
     ["<leader>dgt"] = {
       function()
         require('dap-go').debug_test()
@@ -26,25 +32,6 @@ M.dap = {
         require('dap-go').debug_last()
       end,
       "Debug last go test"
-    },
-    ["<leader>gsj"] = {
-      "<cmd> GoTagAdd json <CR>",
-      "Add json struct tags"
-    },
-    ["<leader>gsy"] = {
-      "<cmd> GoTagAdd yaml <CR>",
-      "Add yaml struct tags"
-    }
-  }
-}
-
-M.dap_python = {
-  plugin = true,
-  n = {
-    ["<leader>dpr"] = {
-      function()
-        require('dap-python').test_method()
-      end
     }
   }
 }
